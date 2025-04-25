@@ -24,7 +24,7 @@ def get_players(db: Session, skip: int = 0, limit: int = 100,
 
     return query.offset(skip).limit(limit).all()
 
-def get_performance(db: Session, skip: int = 0, limit: int = 100,
+def get_performances(db: Session, skip: int = 0, limit: int = 100,
                     min_last_changed_date: date = None):
     """Get all performances with optional filters"""
     query = db.query(models.Performance)
